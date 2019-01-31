@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="src/static/css/common/bootstrap.min.css">
+    <link rel="stylesheet" href="src/static/css/index.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_523036_p4zhph32tpq.css">
+</head>
+<body>
+<!--导航栏-->
+<div class="navTool">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        中国大陆
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu nav-region-list">
+                        <li class="nav-region-item"><a href="#">全球</a></li>
+                        <li class="nav-region-item"><a href="#">中国大陆</a></li>
+                        <li class="nav-region-item"><a href="#">香港</a></li>
+                        <li class="nav-region-item"><a href="#">台湾</a></li>
+                        <li class="nav-region-item"><a href="#">澳门</a></li>
+                        <li class="nav-region-item"><a href="#">韩国</a></li>
+                        <li class="nav-region-item"><a href="#">马来西亚</a></li>
+                        <li class="nav-region-item"><a href="#">澳大利亚</a></li>
+                        <li class="nav-region-item"><a href="#">新加坡</a></li>
+                        <li class="nav-region-item"><a href="#">新西兰</a></li>
+                        <li class="nav-region-item"><a href="#">加拿大</a></li>
+                        <li class="nav-region-item"><a href="#">美国</a></li>
+                        <li class="nav-region-item"><a href="#">日本</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="font-red">亲，请登录</a></li>
+                <li><a href="#">免费注册</a></li>
+                <li><a href="#">手机逛淘宝</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-nav-r">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的淘宝
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu common-list">
+                        <li class="my-taobao-item common-item"><a href="#">已买到的宝贝</a></li>
+                        <li class="my-taobao-item common-item"><a href="#">我的足迹</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">
+                    <i class="iconfont icon-gouwuchekong"></i>
+                    购物车</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-shoucang"></i>
+                        收藏夹
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu common-list">
+                        <li class="collection-item common-item"><a href="#">收藏的宝贝</a></li>
+                        <li class="collection-item common-item"><a href="#">收藏的店铺</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">|</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        卖家中心
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu common-list">
+                        <li class="common-item"><a href="#">免费开店</a></li>
+                        <li class="common-item"><a href="#">已卖出的宝贝</a></li>
+                        <li class="common-item"><a href="#">出售中的宝贝</a></li>
+                        <li class="common-item"><a href="#">卖家服务市场</a></li>
+                        <li class="common-item"><a href="#">卖家培训中心</a></li>
+                        <li class="common-item"><a href="#">体检中心</a></li>
+                        <li class="common-item"><a href="#">问商友</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        联系客服
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu common-list">
+                        <li class="common-item"><a href="#">消费者客服</a></li>
+                        <li class="common-item"><a href="#">卖家客服</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-caidan" style="font-size:12px"></i>
+                        网站导航
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">主题市场</a></li>
+                        <li><a href="#">特色市场</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!--搜索栏-->
+<div class="toolbar">
+    <div class="top">
+        <div class="top-wrap">
+            <!--logo-->
+            <div class="tb-logo">
+                <div class="logo">
+                    <a class="logo-bd" href="#" target="_blank">
+                        <img src="src/static/img/淘宝logo.png" alt="淘宝logo"></a>
+                </div>
+            </div>
+            <!--搜索条-->
+            <div class="tb-search">
+                <div class="search-wrap">
+                    <div class="search-bd">
+                        <div class="search-bd-header">
+                            <ul class="search-nav">
+                                <li id="tab1" class="goods-search-tab selected tb-bg" onclick="goodsClick()">宝贝
+                                    <!--<a aria-expanded="true" class="step" data-toggle="tab" href="#tab1">-->
+                                    <!--<span class="desc">宝贝</span>-->
+                                    <!--</a>-->
+                                </li>
+                                <li id="tab2" class="tmall-search-tab" onclick="tmallClick()">天猫
+                                    <!--<a class="step" data-toggle="tab" href="#tab2">-->
+                                    <!--<span class="desc">天猫 </span>-->
+                                    <!--</a>-->
+                                </li>
+                                <li id="tab3" class="shop-search-tab" onclick="shopClick()">店铺
+                                    <!--<a class="step" data-toggle="tab" href="#tab3">-->
+                                    <!--<span class="desc">店铺</span>-->
+                                    <!--</a>-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-panel">
+                            <form>
+                                <div class="search-button">
+                                    <button class="btn-search tb-bg" type="submit">搜索</button>
+                                </div>
+                                <div class="search-input">
+                                    <div class="search-combobox-input-wrap">
+                                        <input id="q" type="text">
+                                        <i class="iconfont icon-sousuo"></i>
+                                    </div>
+                                    <div id="search-upload" class="search-upload">
+                                        <i class="iconfont icon-zhaoxiangji"></i>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="search-ft">
+                        <div id="TbSearchContent">
+                            <div class="search-hots">
+                                <div class="search-hots-lines">
+                                    <a href="#">新款连衣裙</a>
+                                    <a href="#">四件套</a>
+                                    <a href="#" class="font-red">潮流T恤</a>
+                                    <a href="#">时尚女鞋</a>
+                                    <a href="#">短裤</a>
+                                    <a href="#">半身裙</a>
+                                    <a href="#">男士外套</a>
+                                    <a href="#">墙纸</a>
+                                    <a href="#">行车记录仪</a>
+                                    <a href="#">新款男鞋</a>
+                                    <a href="#">耳机</a>
+                                    <a href="#">时尚女包</a>
+                                    <a href="#">沙发</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--工具条-->
+<div class="tbh-nav tb-bg">
+    <div class="nav-bar">
+        <h2>主题市场</h2>
+        <ul class="nav-hd">
+            <li><a>天猫</a></li>
+            <li><a>聚划算</a></li>
+            <li><a>天猫超市</a></li>
+        </ul>
+        <ul class="nav-bd">
+            <li class="pipe">|</li>
+            <li><a>淘抢购</a></li>
+            <li><a>电器城</a></li>
+            <li><a>司法拍卖</a></li>
+            <li><a>淘宝心选</a></li>
+            <li><a>兴农扶贫</a></li>
+        </ul>
+        <ul class="nav-bd last">
+            <li class="pipe">|</li>
+            <li><a>飞猪旅行</a></li>
+            <li><a>智能生活</a></li>
+            <li><a>苏宁易购</a></li>
+        </ul>
+    </div>
+</div>
+<!--分类-->
+<div class="screen-outer">
+    <div class="main">
+        <div class="main-inner clearfix">
+            <div class="tbh-service J_Module">
+                <div class="service J_Service">
+                    <ul class="service-bd">
+                        <li>
+                            <a>女装</a> /
+                            <a>男装</a> /
+                            <a>内衣</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>鞋靴</a> /
+                            <a>箱包</a> /
+                            <a>配件</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>童装玩具</a> /
+                            <a>孕产</a> /
+                            <a>用品</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>家电</a> /
+                            <a>数码</a> /
+                            <a>手机</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>美妆</a> /
+                            <a>洗护</a> /
+                            <a>保健品</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>珠宝</a> /
+                            <a>眼睛</a> /
+                            <a>手表</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>运动</a> /
+                            <a>户外</a> /
+                            <a>乐器</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>游戏</a> /
+                            <a>动漫</a> /
+                            <a>影视</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>美食</a> /
+                            <a>生鲜</a> /
+                            <a>零食</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>鲜花</a> /
+                            <a>宠物</a> /
+                            <a>农资</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>工具</a> /
+                            <a>装修</a> /
+                            <a>建材</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>家具</a> /
+                            <a>家饰</a> /
+                            <a>家纺</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>汽车</a> /
+                            <a>二手车</a> /
+                            <a>用品</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>办公</a> /
+                            <a>DIY</a> /
+                            <a>五金电子</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>百货</a> /
+                            <a>餐厨</a> /
+                            <a>家庭保健</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                        <li>
+                            <a>学习</a> /
+                            <a>卡劵</a> /
+                            <a>本地服务</a>
+                            <i class="iconfont icon-arrow-down service-arrow"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--轮播图-->
+            <div class="core J_Core">
+                <!--淘宝-->
+                <div class="tbh-promo J_Module">
+                    <div class="promo J_Promo tb-loading">
+                        <div class="promo-bd">
+
+                            <div class="wrap" style="left:-520px;">
+                                <img src="src/static/img/RotationChart1/5.jpg" alt="">
+                                <img src="src/static/img/RotationChart1/1.png" alt="">
+                                <img src="src/static/img/RotationChart1/2.jpg" alt="">
+                                <img src="src/static/img/RotationChart1/3.jpg" alt="">
+                                <img src="src/static/img/RotationChart1/4.jpg" alt="">
+                                <img src="src/static/img/RotationChart1/5.jpg" alt="">
+                                <img src="src/static/img/RotationChart1/1.png" alt="">
+                            </div>
+                            <div class="buttons">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                            <a href="javascript:;" class="arrow arrow_left">
+                                <i class="iconfont icon-zuojiantoudaohangbiaoqian"></i>
+                            </a>
+                            <a href="javascript:;" class="arrow arrow_right" style="text-align: center">
+                                <i class="iconfont icon-youjiantoudaohangbiaoqian"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--天猫-->
+                <div class="tbh-tmall J_Module">
+                    <div class="tmall J_Tmall">
+                        <div class="tmall-hd">
+                            <div class="inner">
+                                <span class="hd-bg" style="background-image: url(./src/static/img/tmall.png)"></span>
+                                <em>理想生活上天猫</em>
+                                <strong>
+                                    <i>1</i>
+                                    /6
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="tmall-bd">
+                            <div  class="tmall-wrap" style="position: absolute; overflow: hidden; width: 4160px; transition-duration: 0.3s; transform: translate3d(-2080px, 0px, 0px); backface-visibility: hidden; left: 0; opacity: 1;">
+                                <!--6-->
+                                <div class="J_Tce mod mod-2 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/kuka.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/xiaolangjiu.jpg">
+                                    </a>
+                                </div>
+                                <!--1-->
+                                <div class="J_Tce mod mod-2 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/haier.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/mengjie.jpg">
+                                    </a>
+                                </div>
+                                <!--2-->
+                                <div class="mod J_Ald_03014 mod-12 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/baicaowei.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/dadong.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/sofina.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/tujia.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/revlon.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/canmake.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/xiaomihu.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/septwolves.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/fenmeidaikang.png">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/shuimima.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/biore.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/moco.png">
+                                    </a>
+                                </div>
+                                <!--3-->
+                                <div class="J_Tce mod mod-2 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/nvzhuang.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/shouji.jpg">
+                                    </a>
+                                </div>
+                                <!--4-->
+                                <div class="mod J_Ald_07085 mod-4 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/shengxuan.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/jiazhuang.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/liangyou.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/tunhuo.jpg">
+                                    </a>
+                                </div>
+                                <!--5-->
+                                <div class="mod J_Ald_07085 mod-4 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/shuma.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/dianjing.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/tv.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/tejia.jpg">
+                                    </a>
+                                </div>
+                                <!--6-->
+                                <div class="J_Tce mod mod-2 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/kuka.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/xiaolangjiu.jpg">
+                                    </a>
+                                </div>
+                                <!--1-->
+                                <div class="J_Tce mod mod-2 mod-loaded"
+                                     style="float: left; overflow: hidden; width: 520px; display: block; visibility: visible;">
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/haier.jpg">
+                                    </a>
+                                    <a href="">
+                                        <img src="./src/static/img/RotationChart2/mengjie.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tmall-nav">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                            </div>
+                            <a href="javascript:;" class="arrow arrow_left">
+                                <i class="iconfont icon-zuojiantoudaohangbiaoqian"></i>
+                            </a>
+                            <a href="javascript:;" class="arrow arrow_right" style="text-align: center">
+                                <i class="iconfont icon-youjiantoudaohangbiaoqian"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-column"></div>
+
+        </div>
+    </div>
+    <div class="col-right"></div>
+</div>
+
+
+<!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+<!--<script src="src/static/js/jquery-3.1.1.min.js"></script>-->
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="./src/static/js/index.js"></script>
+<!--<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+</body>
+</html>
